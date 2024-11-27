@@ -26,7 +26,7 @@ function loadMorePlaylists() {
   playlist.className = "playlist";
   playlist.innerHTML = `
     <h3>Playlist ${playlistCount}</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL${playlistCount}" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/playlist?list=PLELAQjFzxU_4KIqHW9KzB58p-fCeZii8s${playlistCount}" frameborder="0" allowfullscreen></iframe>
   `;
   playlistContainer.appendChild(playlist);
   playlistCount++;
