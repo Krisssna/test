@@ -18,7 +18,7 @@ function loadMoreBlogs() {
   }
 }
 
-let playlistCount = 2;
+let playlistCount = 1;
 
 function loadMorePlaylists() {
   const playlistContainer = document.getElementById("playlists");
