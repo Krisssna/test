@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+      <li><a href="#" onclick="showSection('work')">Work</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+    </ul>
+  </nav>
+
+  <div id="home" class="section">
+    <h1>Welcome to My Portfolio</h1>
+    <div class="blog-thumbnails">
+      <div class="blog-thumbnail">Blog 1</div>
+      <div class="blog-thumbnail">Blog 2</div>
+      <div class="blog-thumbnail">Blog 3</div>
+      <div class="blog-thumbnail">Blog 4</div>
+    </div>
+    <button onclick="loadMoreBlogs()">More Blogs</button>
+  </div>
+
+  <div id="skills" class="section hidden">
+    <h1>My Skills</h1>
+    <p>Write your skills here...</p>
+  </div>
+
+  <div id="work" class="section hidden">
+    <h1>My Work</h1>
+    <div id="playlists">
+      <div class="playlist">
+        <h3>Playlist 1</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <button onclick="loadMorePlaylists()">More Playlists</button>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Useful Link 1</a>
+      <a href="#">Useful Link 2</a>
+      <a href="#">Useful Link 3</a>
+    </div>
+    <div class="social-links">
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
