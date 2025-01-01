@@ -1,10 +1,14 @@
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+
 document.addEventListener('click', function(event) {
-    const dropdowns = document.querySelectorAll('.dropdown-content');
-    dropdowns.forEach(dropdown => {
-        if (!dropdown.parentElement.contains(event.target)) {
-            dropdown.style.display = 'none';
-        }
-    });
+    const menu = document.getElementById('menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+        menu.style.display = 'none';
+    }
 });
 
 document.querySelectorAll('.dropdown').forEach(dropdown => {
