@@ -95,6 +95,16 @@ main {
     gap: 20px;
 }
 
+@media (min-width: 769px) {
+    .intro {
+        flex: 1;
+    }
+    .playlists {
+        flex: 2;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .playlists {
         grid-template-columns: 1fr;
