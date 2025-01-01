@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 nav {
@@ -73,11 +74,12 @@ nav {
 
 main {
     display: flex;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
 .intro {
-    flex: 1;
+    flex: 1 1 100%;
     padding-right: 20px;
 }
 
@@ -87,10 +89,16 @@ main {
 }
 
 .playlists {
-    flex: 2;
+    flex: 1 1 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .playlists {
+        grid-template-columns: 1fr;
+    }
 }
 
 footer {
