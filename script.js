@@ -3,10 +3,10 @@ document.getElementById('menuToggle').addEventListener('click', function() {
     document.getElementById('mobileMenu').classList.toggle('show');
 });
 
-// Handle submenu for Apps
-document.querySelectorAll('.mobile-nav > ul > li').forEach(item => {
-    item.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A' && this.querySelector('.submenu')) {
+// Handle dropdown for both desktop and mobile
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+    dropdown.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) { // Mobile view
             e.preventDefault();
             this.classList.toggle('show');
         }
