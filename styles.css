@@ -175,6 +175,106 @@ header .mobile-nav {
     display: block;
 }
 
+/* Hero Section */
+#hero {
+    background: url('sample-hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Portfolio Section */
+#portfolio .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#portfolio .col {
+    width: 32%; /* 3 columns on PC */
+    margin-bottom: 20px;
+}
+
+#portfolio img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#portfolio img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    width: 48%;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ccc;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mobile-nav.show {
+    animation: fadeInDown 0.3s ease;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     header .desktop-nav {
@@ -187,5 +287,13 @@ header .mobile-nav {
 
     header .mobile-nav.show {
         display: block;
+    }
+
+    .mobile-nav .dropdown-content {
+        padding-left: 0; /* Reset padding for mobile to avoid double indent */
+    }
+
+    #portfolio .col {
+        width: 48%; /* 2 columns on mobile */
     }
 }
