@@ -1,299 +1,88 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-h1, h2, h3 {
-    font-family: 'Georgia', serif;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Header Styles */
-header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #777 3px solid;
-    position: relative;
-    z-index: 10;
-}
-
-header .logo {
-    float: left;
-}
-
-header nav.desktop-nav {
-    display: block;
-    float: right;
-}
-
-header nav.desktop-nav ul {
-    list-style: none;
-    position: relative;
-}
-
-header nav.desktop-nav ul li {
-    display: inline-block;
-    position: relative;
-}
-
-header nav.desktop-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px 20px;
-}
-
-/* Desktop Dropdown */
-header nav.desktop-nav ul .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    top: 100%;
-    left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-header nav.desktop-nav ul .dropdown:hover .dropdown-content,
-header nav.desktop-nav ul .dropdown.show .dropdown-content {
-    display: block;
-}
-
-header nav.desktop-nav ul .dropdown-content li {
-    display: block;
-}
-
-header nav.desktop-nav ul .dropdown-content li a {
-    color: #333;
-    text-transform: none;
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
     padding: 10px;
 }
 
-/* Mobile Nav Styles */
-header .mobile-nav-toggle {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 15px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 15;
+.nav-left {
+    font-size: 24px;
 }
 
-header .mobile-nav-toggle::before, .mobile-nav-toggle::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    transition: all 0.3s ease;
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-header .mobile-nav-toggle::before {
-    top: 10px;
-}
-
-header .mobile-nav-toggle::after {
-    bottom: 10px;
-}
-
-header .mobile-nav-toggle.show::before {
-    transform: rotate(45deg);
-    top: 14px;
-}
-
-header .mobile-nav-toggle.show::after {
-    transform: rotate(-45deg);
-    bottom: 14px;
-}
-
-header .mobile-nav-toggle.show {
-    background: transparent;
-}
-
-header .mobile-nav-toggle:focus, .mobile-nav a:focus {
-    outline: 2px solid #fff;
-}
-
-header .mobile-nav-toggle:hover::before, .mobile-nav-toggle:hover::after {
-    background-color: #ddd;
-}
-
-header .mobile-nav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #444;
-    padding: 20px 0;
-    z-index: 5;
-}
-
-.mobile-nav ul {
-    list-style-type: none;
-}
-
-.mobile-nav li {
-    padding: 10px 20px;
+.nav-right li {
+    margin: 0 15px;
     position: relative;
 }
 
-.mobile-nav a {
-    color: #fff;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.mobile-nav a:hover, .mobile-nav a:focus {
-    color: #ddd;
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
 }
 
-.mobile-nav .dropdown-content {
-    display: none;
-    background: #555;
-    padding-left: 20px;
-}
-
-.mobile-nav .dropdown.show > .dropdown-content {
-    display: block;
-}
-
-/* Hero Section */
-#hero {
-    background: url('sample-hero.jpg') no-repeat center center/cover;
-    height: 400px;
+main {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content h1 {
-    color: white;
-    font-size: 3em;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-#hero h1 {
-    font-size: 2.5em;
-    text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
 }
 
-/* Portfolio Section */
-#portfolio .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.intro {
+    flex: 1;
+    padding-right: 20px;
 }
 
-#portfolio .col {
-    width: 32%; /* 3 columns on PC */
-    margin-bottom: 20px;
-}
-
-#portfolio img {
-    width: 100%;
-    height: auto;
+.intro img {
     max-width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
+    height: auto;
 }
 
-#portfolio img:hover {
-    transform: scale(1.05);
+.playlists {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-/* Footer Section */
 footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-column {
-    width: 48%;
-}
-
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-.footer-column a {
-    color: #ccc;
-}
-
-.footer-column a:hover {
-    color: #fff;
-}
-
-.copyright {
+    background-color: #333;
+    color: white;
     text-align: center;
-    margin-top: 20px;
+    padding: 10px;
 }
 
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -20px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.mobile-nav.show {
-    animation: fadeInDown 0.3s ease;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    header .desktop-nav {
-        display: none;
-    }
-
-    header .mobile-nav-toggle {
-        display: block;
-    }
-
-    header .mobile-nav.show {
-        display: block;
-    }
-
-    .mobile-nav .dropdown-content {
-        padding-left: 0; /* Reset padding for mobile to avoid double indent */
-    }
-
-    #portfolio .col {
-        width: 48%; /* 2 columns on mobile */
-    }
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
 }
