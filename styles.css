@@ -273,7 +273,10 @@ footer {
     header .mobile-nav.show {
         display: block;
     }
-
+    
+.mobile-nav .dropdown-content {
+        padding-left: 0; /* Reset padding for mobile to avoid double indent */
+    }
     #portfolio .col {
         width: 48%; /* 2 columns on mobile */
     }
