@@ -3,101 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna</title>
+    <title>Krishna's Website</title>
     <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<header>
-    <div class="container">
-        <!-- Logo -->
-        <div class="logo">
-            <h1>My Site</h1>
+    <nav>
+        <div class="nav-left">Krishna</div>
+        <div class="nav-right">
+            <ul>
+                <li>Market Data</li>
+                <li class="dropdown">Apps
+                    <ul class="dropdown-content">
+                        <li class="dropdown">App1
+                            <ul class="dropdown-content">
+                                <li><a href="#">Play Store Link</a></li>
+                                <li><a href="#">App Store Link</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">App2
+                            <ul class="dropdown-content">
+                                <li><a href="#">Play Store Link</a></li>
+                                <li><a href="#">App Store Link</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">App3
+                            <ul class="dropdown-content">
+                                <li><a href="#">Play Store Link</a></li>
+                                <li><a href="#">App Store Link</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
         </div>
-
-        <!-- Mobile Menu Toggle -->
-        <div id="menuToggle" class="mobile-nav-toggle"></div>
-
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Market Data</a></li>
-                <li class="dropdown">
-                    <a href="#">Apps</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">App 1</a></li>
-                        <li><a href="#">App 2</a></li>
-                        <li><a href="#">App 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-
-        <!-- Mobile Navigation -->
-        <nav id="mobileMenu" class="mobile-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Market Data</a></li>
-                <li class="dropdown">
-                    <a href="#">Apps</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">App 1</a></li>
-                        <li><a href="#">App 2</a></li>
-                        <li><a href="#">App 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
+    </nav>
     <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Welcome to My Site</h1>
-            </div>
-        </section>
-
-        <section id="portfolio" class="container">
-            <h2>Portfolio</h2>
-            <div class="row">
-                <div class="col">
-                    <img src="img1.jpg" alt="Portfolio Image 1">
-                </div>
-                <div class="col">
-                    <img src="img2.jpg" alt="Portfolio Image 2">
-                </div>
-                <div class="col">
-                    <img src="img3.jpg" alt="Portfolio Image 3">
-                </div>
-            </div>
-        </section>
+        <div class="intro">
+            <img src="photo.jpg" alt="Photo">
+            <p>Welcome to Krishna's website. Here you will find various resources and information.</p>
+        </div>
+        <div class="playlists">
+            <iframe src="https://www.youtube.com/embed/playlist1" frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/playlist2" frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/playlist3" frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/playlist4" frameborder="0"></iframe>
+        </div>
     </main>
-
     <footer>
-        <div class="container footer-content">
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <p>just nothing</p>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <ul>
-                    <li><a href="#">Email Us</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-            </div>
+        <div class="footer-links">
+            <a href="#">Useful Links</a>
+            <a href="#">Social Media Links</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 My Site. All Rights Reserved.</p>
-        </div>
+        <p>© 2025 Krishna. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
