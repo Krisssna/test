@@ -3,86 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna</title>
+    <title>Responsive Navigation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">Krishna</div>
+            <!-- Logo -->
+            <div class="logo">
+                <h1>My Site</h1>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div id="menuToggle" class="mobile-nav-toggle"></div>
+
+            <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#market-data">Market Data</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Market Data</a></li>
                     <li class="dropdown">
-                        <a href="#apps">Apps</a>
+                        <a href="#">Apps</a>
                         <ul class="dropdown-content">
-                            <li><a href="#caputok">Caputok</a></li>
-                            <li><a href="#abc">ABC</a></li>
+                            <li><a href="#">App 1</a></li>
+                            <li><a href="#">App 2</a></li>
+                            <li><a href="#">App 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
             </nav>
-            <div class="mobile-nav-toggle" id="menuToggle"></div>
-            <nav class="mobile-nav" id="mobileMenu">
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileMenu" class="mobile-nav">
                 <ul>
-                    <li><a href="#market-data">Market Data</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Market Data</a></li>
                     <li class="dropdown">
-                        <a href="#apps">Apps</a>
+                        <a href="#">Apps</a>
                         <ul class="dropdown-content">
-                            <li><a href="#caputok">Caputok</a></li>
-                            <li><a href="#abc">ABC</a></li>
+                            <li><a href="#">App 1</a></li>
+                            <li><a href="#">App 2</a></li>
+                            <li><a href="#">App 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I am Krishna.</h1>
-        </div>
-    </section>
 
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col"><img src="sample1.jpg" alt="Project 1"><p>Description 1</p></div>
-                <div class="col"><img src="sample2.jpg" alt="Project 2"><p>Description 2</p></div>
-                <div class="col"><img src="sample3.jpg" alt="Project 3"><p>Description 3</p></div>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Site</h1>
             </div>
+        </section>
+
+        <section id="portfolio" class="container">
+            <h2>Portfolio</h2>
             <div class="row">
-                <div class="col"><img src="sample4.jpg" alt="Project 4"><p>Description 4</p></div>
-                <div class="col"><img src="sample5.jpg" alt="Project 5"><p>Description 5</p></div>
-                <div class="col"><img src="sample6.jpg" alt="Project 6"><p>Description 6</p></div>
+                <div class="col">
+                    <img src="img1.jpg" alt="Portfolio Image 1">
+                </div>
+                <div class="col">
+                    <img src="img2.jpg" alt="Portfolio Image 2">
+                </div>
+                <div class="col">
+                    <img src="img3.jpg" alt="Portfolio Image 3">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                    </ul>
-                </div>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="copyright">
-                © 2025 Krishna. All rights reserved.
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Email Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
             </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 My Site. All Rights Reserved.</p>
         </div>
     </footer>
 
