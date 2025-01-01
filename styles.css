@@ -28,7 +28,7 @@ header {
     min-height: 70px;
     border-bottom: #777 3px solid;
     position: relative;
-    z-index: 10; /* Ensure the header is above all dropdowns */
+    z-index: 10;
 }
 
 header .logo {
@@ -42,7 +42,7 @@ header nav.desktop-nav {
 
 header nav.desktop-nav ul {
     list-style: none;
-    position: relative; /* Establish a positioning context for dropdowns */
+    position: relative;
 }
 
 header nav.desktop-nav ul li {
@@ -62,14 +62,15 @@ header nav.desktop-nav ul .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 200px; /* Ensure dropdown is wide enough */
-    top: 100%; /* Position below the navbar */
+    min-width: 200px;
+    top: 100%;
     left: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 20; /* Ensure it appears above other elements */
+    z-index: 1000;
 }
 
-header nav.desktop-nav ul .dropdown:hover .dropdown-content {
+header nav.desktop-nav ul .dropdown:hover .dropdown-content,
+header nav.desktop-nav ul .dropdown.show .dropdown-content {
     display: block;
 }
 
@@ -86,12 +87,13 @@ header nav.desktop-nav ul .dropdown-content li a {
 /* Mobile Nav Styles */
 header .mobile-nav-toggle {
     display: none;
-    position: relative;
+    position: absolute;
+    right: 10px;
+    top: 15px;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    float: right;
-    margin-top: 20px;
+    z-index: 15;
 }
 
 header .mobile-nav-toggle::before, .mobile-nav-toggle::after {
@@ -141,12 +143,11 @@ header .mobile-nav {
     width: 100%;
     background: #444;
     padding: 20px 0;
-    z-index: 15; /* Ensure mobile nav appears above content */
+    z-index: 5;
 }
 
 .mobile-nav ul {
     list-style-type: none;
-    padding: 0;
 }
 
 .mobile-nav li {
@@ -174,106 +175,6 @@ header .mobile-nav {
     display: block;
 }
 
-/* Hero Section */
-#hero {
-    background: url('sample-hero.jpg') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content h1 {
-    color: white;
-    font-size: 3em;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-#hero h1 {
-    font-size: 2.5em;
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-/* Portfolio Section */
-#portfolio .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#portfolio .col {
-    width: 32%; /* 3 columns on PC */
-    margin-bottom: 20px;
-}
-
-#portfolio img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-#portfolio img:hover {
-    transform: scale(1.05);
-}
-
-/* Footer Section */
-footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-column {
-    width: 48%;
-}
-
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-.footer-column a {
-    color: #ccc;
-}
-
-.footer-column a:hover {
-    color: #fff;
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -20px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.mobile-nav.show {
-    animation: fadeInDown 0.3s ease;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     header .desktop-nav {
@@ -286,13 +187,5 @@ footer {
 
     header .mobile-nav.show {
         display: block;
-    }
-
-    .mobile-nav .dropdown-content {
-        padding-left: 0; /* Reset padding for mobile to avoid double indent */
-    }
-
-    #portfolio .col {
-        width: 48%; /* 2 columns on mobile */
     }
 }
