@@ -88,26 +88,36 @@ main {
     height: auto;
 }
 
-.playlists {
+.gallery {
     flex: 1 1 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    overflow-x: scroll;
     gap: 20px;
+}
+
+.photo {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
 }
 
 @media (min-width: 769px) {
     .intro {
         flex: 1;
     }
-    .playlists {
+    .gallery {
         flex: 2;
-        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 768px) {
-    .playlists {
-        grid-template-columns: 1fr;
+    .gallery {
+        flex-direction: column;
     }
 }
 
