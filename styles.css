@@ -16,21 +16,40 @@ nav {
     font-size: 24px;
 }
 
-.nav-right ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.nav-right {
+    position: relative;
 }
 
-.nav-right li {
-    margin: 0 15px;
-    position: relative;
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 200px;
+}
+
+#menu li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+#menu li:hover {
+    background-color: #444;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
